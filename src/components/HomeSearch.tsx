@@ -13,12 +13,12 @@ function HomeSearch(): JSX.Element {
   const handleSubmit = (e: React.SyntheticEvent<HTMLElement>) => {
     e.preventDefault();
     if (!input.trim()) return;
-    router.push(`/search/web/?searchTerm=${input.trimStart()}`);
+    router.push(`/search?q=${input.trimStart()}`);
   };
 
   const handleRandomSearch = () => {
     const randomWord = randomWords(1)[0];
-    router.push(`/search/web/?searchTerm=${randomWord}`);
+    router.push(`/search?q=${randomWord}`);
   };
 
   return (

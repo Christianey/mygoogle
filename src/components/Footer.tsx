@@ -1,11 +1,20 @@
 import React from "react";
-import CountryLookup from "./CountryLookup";
 
-function Footer() {
+async function getLocation() {
+  const result = await fetch("http://ip-api.com/json/")
+
+  if(!result.ok) {
+    throw new Error("Failed to fetch data")
+  }
+  return result.json()
+}
+
+async function Footer() {
+  const location = await getLocation()
   return (
     <footer className="absolute w-full bottom-0 text-sm bg-[#f2f2f2] text-gray-500">
       <div className="border-b px-8 py-3">
-        <CountryLookup />
+        {`${location.city}, ${location.country}`}
       </div>
       <div className="flex flex-col sm:flex-row justify-between items-center px-8 py-3 space-y-7 sm:space-y-0">
         <ul className="flex items-center space-x-6">
