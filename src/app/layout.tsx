@@ -14,6 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}
+
+      {/* @ts-expect-error Server Component */}
       <Footer />
       </body>
     </html>
