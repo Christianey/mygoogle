@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}
+      <body className='relative min-h-screen'>{children}
 
       {/* @ts-expect-error Server Component */}
       <Footer />

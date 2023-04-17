@@ -16,7 +16,7 @@ const SearchHeaderOptions = () => {
     <div className="flex space-x-2 select-none border-b w-full justify-center md:justify-start md:pl-40 text-gray-700 text-sm">
       <div
         className={`flex items-center bg-red space-x-1 border-transparent border-b-4 active:text-blue-500 px-3 pb-2 cursor-pointer ${
-          pathname === "/search" ? "text-blue-600 border-blue-600" : ""
+          pathname === "/search" ? "text-blue-600 !border-blue-600" : ""
         }`}
         onClick={() => {
           selectTab("");
@@ -27,7 +27,7 @@ const SearchHeaderOptions = () => {
       </div>
       <div
         className={`flex items-center bg-red space-x-1 border-transparent border-b-4 active:text-blue-500 px-3 pb-2 cursor-pointer ${
-          pathname === "/search/images" ? "text-blue-600 border-blue-600" : ""
+          pathname === "/search/images" ? "text-blue-600 !border-blue-600" : ""
         }`}
         onClick={() => {
           selectTab("images");
