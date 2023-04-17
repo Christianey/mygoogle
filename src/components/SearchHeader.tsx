@@ -13,14 +13,14 @@ const SearchHeader = () => {
         <Link href={"/"}>
           <Image
             alt="Google image"
-            width={"100"}
-            height={"40"}
+            width={100}
+            height={40}
             src={
               "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png"
             }
           />
         </Link>
-        <div className="flex-1">
+        <div className="flex-1 flex justify-center">
           <SearchBox />
         </div>
         <div className="hidden md:inline-flex space-x-1">
