@@ -11,7 +11,7 @@ const SearchBox = () => {
   const router = useRouter()
   const searchParams = useSearchParams();
   const search = searchParams.get("q");
-  const [input, setInput] = useState<string>(search as string);
+  const [input, setInput] = useState<string>(search as string || "");
   
   const handleSubmit = (e: React.FormEvent<HTMLElement | SVGElement>) => {
     e.preventDefault();
