@@ -30,7 +30,7 @@ const SearchBox = () => {
         type="text"
         className="flex-grow focus:outline-none"
       />
-      <RxCross2 className="text-xl text-gray-500 mr-3 cursor-pointer" onClick={() => setInput("")} />
+      <RxCross2 className="text-xl text-gray-500 mr-0 sm:mr-3 cursor-pointer" onClick={() => setInput("")} />
       <BsMicFill className="hidden sm:inline-flex mr-3 text-4xl pl-4 border-l-2 border-gray-300 text-blue-500 cursor-pointer" />
       <AiOutlineSearch className="text-2xl hidden sm:inline-flex text-blue-500 cursor-pointer mr-3" onClick={handleSubmit} />
     </form>
