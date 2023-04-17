@@ -41,7 +41,7 @@ function HomeSearch(): JSX.Element {
           Google Search
         </button>
         <button className="btn" onClick={handleRandomSearch}>
-          I'm feeling lucky
+          I&apos; feeling lucky
         </button>
       </div>
     </>
