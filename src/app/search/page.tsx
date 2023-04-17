@@ -3,10 +3,11 @@ import Link from "next/link";
 import React from "react";
 
 const Search = async ({ searchParams }: any) => {
-  await new Promise(resolve => setTimeout(resolve, 5000))
-  const response =
-    await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.q}
-  `);
+  const start = searchParams.start || 1;
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+  const response = await fetch(
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.API_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.q}`
+  );
 
   if (!response.ok) {
     throw new Error("Something sent wrong");
@@ -28,12 +29,7 @@ const Search = async ({ searchParams }: any) => {
     );
   }
 
-  return (
-    <div>
-      {data &&
-        <WebSearchResults results={results} />}
-    </div>
-  );
+  return <div>{data && <WebSearchResults results={results} />}</div>;
 };
 
 export default Search;
